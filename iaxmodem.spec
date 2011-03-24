@@ -54,11 +54,11 @@ gcc $RPM_OPT_FLAGS -Wall -g -DMODEMVER=\"$MODEMVER\" -DDSPVER=\"$DSPVER\" -DIAXV
 gcc -lm -lutil -ltiff -o iaxmodem iaxmodem.o lib/spandsp/src/.libs/libspandsp.a lib/libiax2/src/.libs/libiax.a
 
 %install
-#mkdir -p %{buildroot}/etc/logrotate.d %{buildroot}/usr/bin
-%{__install} -m 644 -D %{SOURCE1} %{buildroot}/etc/logrotate.d/iaxmodem
-%{__install} -m 644 -D %{SOURCE2} %{buildroot}/etc/iaxmodem/
-%{__install} -m 755 -D iaxmodem %{buildroot}%{_sbindir}/iaxmodem
-%{__install} -m 644 -D iaxmodem.1 %{buildroot}%{_mandir}/man1/iaxmodem.1
+mkdir -p %{buildroot}/etc/logrotate.d %{buildroot}/etc/iaxmodem %{buildroot}%{_sbindir} %{buildroot}%{_mandir}/man1
+%{__install} -m 644 %{SOURCE1} %{buildroot}/etc/logrotate.d/iaxmodem
+%{__install} -m 644 %{SOURCE2} %{buildroot}/etc/iaxmodem/
+%{__install} -m 755 iaxmodem %{buildroot}%{_sbindir}/iaxmodem
+%{__install} -m 644 iaxmodem.1 %{buildroot}%{_mandir}/man1/iaxmodem.1
 
 %post
 echo ""
