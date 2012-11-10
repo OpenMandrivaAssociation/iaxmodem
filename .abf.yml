@@ -1,0 +1,4 @@
+sources:
+  "iaxmodem-1.2.0.tar.gz:"	664eefda3f069b66a44a954d1614b2b1c3c603ed
+  "iaxmodem.logrotate:"	20555191fd36688fad893e188114977ff6f04e5c
+  "ttyIAX0:"	c2e0e2b1847c0136d62d5637a120c299315bf13c
