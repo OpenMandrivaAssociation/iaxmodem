@@ -79,3 +79,12 @@ echo "Then run : '/sbin/init q' to reload the inittab settings"
 %attr(0644,root,root) %{_mandir}/man1/*
 %config /etc/logrotate.d/*
 %config(noreplace) /etc/iaxmodem
+
+
+%changelog
+* Thu Mar 24 2011 zamir <zamir@mandriva.org> 1.2.0-0mdv2011.0
++ Revision: 648294
+- fix spec
+- first build
+- create iaxmodem
+
