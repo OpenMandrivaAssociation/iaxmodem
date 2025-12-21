@@ -13,6 +13,11 @@ Source2: ttyIAX0
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}
 #Requires: asterisk >= 1.4.5
 #Requires: hylafax
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: libtiff-devel
 
 %define Werror_cflags %nil
